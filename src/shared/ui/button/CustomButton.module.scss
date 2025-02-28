@@ -1,0 +1,125 @@
+.general{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    border-radius: 12px;
+}
+
+.primary{
+    width: 180px;
+    height: 60px;
+    border-radius: 14px;
+    gap: 10px;
+    padding: 10px;
+    background-color: #0EBD78;
+    color: #fff;
+    border: none;
+    &:hover{
+        background-color: #0EBD78B2;
+    }
+    &:active{
+        background-color: #0B955E;
+    }
+    &:before{
+        content: '\003c';
+        margin-right: 10px;
+    }
+    &:after{
+        content: '\003e';
+        margin-left: 10px;
+    }
+}
+.secondary{
+    width: 180px;
+    height: 60px;
+    border-radius: 14px;
+    gap: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1.5px solid #0EBD78;
+    color: #0EBD78;
+    &:hover{
+        background-color: #0EBD78B2;
+        color: #fff;
+    }
+    &:active{
+        background-color: #0B955E;
+        color: #fff;
+    }
+    &:before{
+        content: '\003c';
+        margin-right: 10px;
+    }
+    &:after{
+        content: '\003e';
+        margin-right: 10px;
+    }
+}
+.textButton{
+    width: 180px;
+    height: 50px;
+    border-radius: 14px;
+    gap: 10px;
+    padding: 10px;
+    background-color: #fff;
+    color: #0EBD78;
+    border: none;
+    &:hover{
+        color: #0EBD78B2;
+        background-color: #fff;
+    }
+    &:active{
+        color: #0B955E;
+        background-color: #fff;
+    }
+    &:before{
+        content: '\003c';
+        margin-right: 10px;
+    }
+    &:after{
+        content: '\003e';
+        margin-right: 10px;
+    }
+}
+.iconButton{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #0EBD78;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    &:hover{
+        background-color: #0EBD78B2;
+        color: #fff;
+    }
+    &:active{
+        background-color: #0B955E;
+        color: #fff;
+    }
+}
+.disabled{
+    background: #9FA8BC ;
+    color: #ffffff;
+    border: none;
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+.cardButton{
+    width: 255px;
+    height: 40px;
+    border-radius: 12px;
+    gap: 10px;
+    padding: 10px;
+    background-color: #0DAB6C;
+    color: #fff;
+    border: none;
+    &:hover{
+        background-color: #0EBD78B2;
+    }
+    &:active{
+        background-color: #0B955E;
+    }
+}

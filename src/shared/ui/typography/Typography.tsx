@@ -1,22 +1,22 @@
-import {FC, JSX, ReactNode} from "react";
-import classNames from "classnames";
-import styles from "./Typography.module.scss";
+import classNames from 'classnames'
+import styles from './Typography.module.scss'
+import { FC, ReactNode,JSX } from 'react'
 
-type TVariants = "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "bodyText" | "smallBodyText";
-type TColors = "black" | "white" | "gray";
-type TFontWeights = "normal" | "bold" | "light" | "regular";
+type TVariants = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'bodyText'| 'smallBodyText'
+type TColors = 'black' | 'white'
+type TWeights = 'regular' | 'medium' | 'semiBold' | 'bold'
 
-interface TTypography {
-    onClick?: () => void;
-    variant: TVariants;
-    className?: string;
-    children: ReactNode;
-    weight: TFontWeights;
-    color: TColors;
-    truncate?: number
-
+type TTypography = {
+    onClick?:()=> void,
+    variant:TVariants,
+    className?:string,
+    color:TColors,
+    children:ReactNode,
+    weight:TWeights,
+    truncate?:number
 }
-    export const Typography: FC<TTypography> = (props)=> {
+
+export const Typography:FC<TTypography> = (props) => {
     const {
         onClick,
         variant,
@@ -27,7 +27,6 @@ interface TTypography {
         truncate
     } = props
 
-
     const Tags: Record<TVariants, keyof JSX.IntrinsicElements> = {
         h1: 'h1',
         h2: 'h2',
@@ -35,19 +34,20 @@ interface TTypography {
         h4: 'h4',
         h5: 'h5',
         h6: 'h6',
-        bodyText: 'p',
-        smallBodyText: 'p',
+        bodyText:'p',
+        smallBodyText:'p',
     }
 
-        const classNamedGenerated = classNames(
-            styles[variant],
-            styles[color],
-            styles[weight],
-            className
-        )
+    const classNamedGenerated = classNames(
+        styles[variant],
+        styles[color],
+        styles[weight],
+        className
+    )
+
     const TagName = Tags[variant]
 
-    const truncateStrings = (str: ReactNode, maxNumber: number): ReactNode => {
+    const truncateString = (str:ReactNode, maxNumber:number):ReactNode => {
         if (typeof str === 'string') {
             return str.length <= maxNumber ? str : str.slice(0, maxNumber) + '...'
         }
@@ -55,8 +55,8 @@ interface TTypography {
     }
 
     return (
-        <TagName onClick={onClick} className={classNamedGenerated}>
-            {truncate ? truncateStrings(children, truncate) : children}
+        <TagName onClick={onClick} className={classNamedGenerated} >
+            {truncate ? truncateString(children,truncate) : children}
         </TagName>
     )
 }

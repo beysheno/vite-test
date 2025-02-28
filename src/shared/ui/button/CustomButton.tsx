@@ -43,7 +43,7 @@ export const CustomButton: FC<ButtonProps> = ({
 
 
     return(
-            <ButtonComponent   className={classNamedGenerated} {...actionAttributes} >
+            <ButtonComponent className={classNamedGenerated} {...actionAttributes} >
                 {isTextBtn ? <Typography variant={'h5'} color={"black"} weight={"semiBold"}>{children}</Typography>:children}
             </ButtonComponent>
 

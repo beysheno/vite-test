@@ -1,19 +1,32 @@
-import {FC} from 'react';
+import {FC, useState} from 'react';
+import classNames from 'classnames';
 import './inputStyle.scss';
-
 
 interface InputsProps {
     placeholder: string;
     classNameInput: string;
-    type: string
+    type: string;
 }
-export const Inputs: FC<InputsProps> = ({placeholder= 'olivia@untitledui.com', classNameInput= 'input', type="text"}) => {
 
+export const Inputs: FC<InputsProps> = ({placeholder= 'olivia@untitledui.com', classNameInput= 'input', type="text"}) => {
+    const [value, setValue] = useState('');
+    const [isError, setIsError] = useState(false);
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const inputValue = e.target.value;
+        setValue(inputValue);
+        setIsError(!inputValue.endsWith('@gmail.com'));
+    };
 
     return (
         <>
-            <input className={classNameInput} placeholder={placeholder} type={type}/>
+            <input
+                className={classNames(classNameInput, { 'inputError': isError })}
+                placeholder={placeholder}
+                type={type}
+                value={value}
+                onChange={handleChange}
+            />
         </>
     );
 }
-

@@ -1,14 +1,18 @@
 import {FC} from 'react';
 import './inputStyle.scss';
 
-export const Inputs: FC = () => {
+
+interface InputsProps {
+    placeholder: string;
+    classNameInput: string;
+}
+export const Inputs: FC<InputsProps> = ({placeholder= 'olivia@untitledui.com', classNameInput= 'input'}) => {
 
 
     return (
-        <div className="App">
-            <h4>Email</h4>
-            <input className='input' placeholder={'olivia@untitledui.com'}/>
-        </div>
+        <>
+            <input className={classNameInput} placeholder={placeholder}/>
+        </>
     );
 }
 

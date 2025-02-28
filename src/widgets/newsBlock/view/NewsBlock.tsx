@@ -1,4 +1,6 @@
 import {Card} from "../../../shared/ui/card/Card.tsx";
+import {Inputs} from "../../../shared/ui/inputs/Inputs.tsx";
+
 
 
 export const NewsBlock = () => {
@@ -10,6 +12,7 @@ export const NewsBlock = () => {
               date={'01.01.2015'}>
 
         </Card>
+        <Inputs placeholder={'fff'} classNameInput={'input'} type={'email'}/>
     </>
     );
 };

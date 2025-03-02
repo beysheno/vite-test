@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Button } from './button/button.tsx'
-import { Pagination } from './pagination/pagination.tsx'
+import { Pagination } from './pagination/ui/Pagination.tsx'
 
 export const App = () => {
     const [page, setPage] = useState(1);

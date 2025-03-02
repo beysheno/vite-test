@@ -1,0 +1,51 @@
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.2s ease-in-out;
+  background: #fff;
+
+  &:focus-within {
+    border-color: #007bff;
+  }
+}
+
+.input {
+  flex: 1;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  color: #666;
+  font-size: 18px;
+}
+
+.error {
+  border-color: #ff4d4f;
+}
+
+.errorText {
+  font-size: 12px;
+  color: #ff4d4f;
+}

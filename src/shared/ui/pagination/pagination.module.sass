@@ -1,0 +1,35 @@
+.pagination
+  display: flex
+  align-items: center
+  gap: 10px
+  width: 460px
+  height: 60px
+  padding: 10px
+  border-radius: 8px
+  position: absolute
+  top: 118px
+  left: 32px
+
+  .btn
+    width: 40px
+    height: 40px
+    padding: 10px
+    border-radius: 8px
+    border: none
+    background-color: white
+    cursor: pointer
+    transition: background-color 0.3s
+
+    &:hover
+      background-color: #ddd
+
+    &.active
+      background-color: #0DAB6C
+      color: white
+
+    &.disabled
+      background-color: #e0e0e0
+      cursor: not-allowed
+
+  .ellipsis
+    padding: 8px

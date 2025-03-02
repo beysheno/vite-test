@@ -17,7 +17,7 @@ export const Layout = () => {
                 Hi
             </Typography>
             <Button/>
-            <Pagination totalPages={19} currentPage={page} onPageChange={setPage}/>
+            <Pagination totalPages={30} currentPage={page} onPageChange={setPage}/>
         </>
     )
 }

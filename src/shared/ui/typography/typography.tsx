@@ -31,8 +31,8 @@ export const Typography: FC<TTypography> = ({
         h2: 'h2',
         h3: 'h3',
         h4: 'h4',
-        titles: 'span', // исправлено (был пустой `''`)
-        buttons: 'span', // исправлено (был пустой `''`)
+        titles: 'span',
+        buttons: 'span',
         bodyText: 'p',
         smallBodyText: 'p'
     };
@@ -44,7 +44,7 @@ export const Typography: FC<TTypography> = ({
         className
     );
 
-    const TagName = Tags[variant] || 'span'; // добавлена защита на случай ошибки
+    const TagName = Tags[variant] || 'span';
 
     const truncateString = (str: ReactNode, maxNumber: number): ReactNode => {
         if (typeof str === 'string') {
